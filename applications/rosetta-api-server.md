@@ -2,7 +2,7 @@
 
 - **Project Name:** Build Rosetta API service
 - **Team Name:** DELIGHT LABS
-- **EOS Payment Address:** TBF
+- **EOS Payment Address:** delightlabs1
 - **[Level](https://github.com/eosnetworkfoundation/grant-framework#grant-levels):** 3
 - **Pomelo Grant(s):** 0
 
