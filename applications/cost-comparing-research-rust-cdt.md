@@ -20,25 +20,26 @@
 ### Overview
 
 - **Name:** Research for building Rust Antelope CDT
-- **Brief Description:** Prior to building Rust Antelope CDT, we want to check the cost effective plan among the cases we thought.
-- **Relationship to EOSIO:** More than C++, many developers using other languages could access & come into Antelope ecosystem and become to be an Antelope builder. We set the first target to Rust.
-- **Reason for Interest:** We want to contribute in non-token area, like infrastructure. As our past experience of building on EOSIO, it run so fast but it seemed that few developers can understand and be a builder. C++ was essential language 10+ years ago, but the trend moves as time goes by. For making bigger builder pool, modern language support & language diversity are essential.
+- **Brief Description:** Checking the most cost-effective plan among the cases we thought of is mandatory for building Rust Antelope CDT.
+- **Relationship to EOSIO:** Many developers using other languages besides C++ will be able to join the Antelope ecosystem and become its builders. We set the first target to Rust.
+- **Reason for Interest:** Lack of language support despite the extremely fast processing speed leaves something to be desired, and we anticipate that modern language support & language diversity help improve this point and expand builder pool. Additionally, in terms of our interests, we would like to contribute to technology-focused areas.
+
 
 ### Project Details
 
-Prior to building Rust Antelope CDT, we want to check these 2 parts and expected direction to implement:
+The project will investigate the following two parts in order to verify the suitable direction to implement:
 
 1. Sufficient compatibility between EOS VM and wasm binary from [Wasmer](https://github.com/wasmerio/wasmer)-based compiler
     - Rust `antelope.cdt` API implementation
 1. Lack of compatibility between EOS VM and wasm binary from [Wasmer](https://github.com/wasmerio/wasmer)-based compiler exists
-    - Devleoping compiler first -> Rust `antelope.cdt` API implementation
+    - Developing compiler first -> Rust `antelope.cdt` API implementation
     - Or Wasmer VM integration on Antelope
 
-As the following plan is quite different among each case, we decided to devide the research proposal.
+This research has been written as a separated proposal since the follow-up plan will be quite different by the result.
 
 ### Ecosystem Fit
 
-By this implementation, Antelope can broad to one more contract language, Rust. And this would be the basis to broad to more language ecosystem. As recently WASM can be made from Golang and Javascript, we look forward Antelope to cover more popular language users.
+This implementation allows Antelope to extend one more contract language, Rust, and this would be the cornerstone of the multiple language support in the Antelope ecosystem. As WASM can be built with Golang and Javascript recently, we look forward Antelope to embracing more other languages' users.
 
 ## Team
 
@@ -131,13 +132,13 @@ NOTE: There is no official general Rust LLVM. [This standardization project](htt
 
 1. If `IR ≅ IR'` and `API ≅ API'`
     - We can directly start from Wasmer's implementation
-      - Implement Antelope-specific data structure and API of `eosio.cdt` (Like table, vector, and etc)
+      - Implement Antelope-specific data structure and API of `eosio.cdt` (Like table, vector, etc)
 1. Else if `IR ≅ IR'` and `API != API'`
     - Implement a compiler first, which works for adjusting WASM API interface from Wasmer spec to EOSVM spec
-    - Aftern then, do (1)
+    - After then, do (1)
 1. Else (`IR != IR'` and `API != API'`)
     - Mounting Wasmer on Antelope would be the cheapest
-    - Mounting Wasmer with the existing state DB compabilization, and do (1)
+    - Mounting Wasmer with the existing state DB compatibilization, and do (1)
     - [Draft proposal of this case](https://github.com/DELIGHT-LABS/grant-framework/blob/docs/wasmer-integration/applications/wasmer-integration.md)
 
 ### Why Wasmer?
