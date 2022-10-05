@@ -28,9 +28,9 @@
 
 Prior to building Rust Antelope CDT, we want to check these 2 parts and expected direction to implement:
 
-1. Sufficient compatibility between EOS VM and wasm binary from Wasmer-based compiler
+1. Sufficient compatibility between EOS VM and wasm binary from [Wasmer](https://github.com/wasmerio/wasmer)-based compiler
     - Rust `antelope.cdt` API implementation
-1. Lack of compatibility between EOS VM and wasm binary from Wasmer-based compiler exists
+1. Lack of compatibility between EOS VM and wasm binary from [Wasmer](https://github.com/wasmerio/wasmer)-based compiler exists
     - Devleoping compiler first -> Rust `antelope.cdt` API implementation
     - Or Wasmer VM integration on Antelope
 
@@ -125,7 +125,7 @@ By this implementation, Antelope can broad to one more contract language, Rust. 
 
 NOTE: There is no official general Rust LLVM. [This standardization project](https://rust-lang.github.io/compiler-team/working-groups/llvm/) is still in incubation status.
 
-**Assumptions**: For cost-effective building, we want to build from the many works of Wasmer, although Antelope doesn't need to mount Wamser.
+**Assumptions**: For cost-effective building, we want to build from the many works of [Wasmer](https://github.com/wasmerio/wasmer), although Antelope doesn't need to mount Wamser.
 
 #### Cases
 
