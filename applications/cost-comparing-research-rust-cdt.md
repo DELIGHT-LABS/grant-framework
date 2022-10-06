@@ -124,9 +124,9 @@ This implementation allows Antelope to extend one more contract language, Rust, 
 └──────────────┘             └──────────────┘            └─────────────────┘
 ```
 
-NOTE: There is no official general Rust LLVM. [This standardization project](https://rust-lang.github.io/compiler-team/working-groups/llvm/) is still in incubation.
+NOTE: There is no official general Rust LLVM. [This standardization project](https://rust-lang.github.io/compiler-team/working-groups/llvm/) is still in incubation status.
 
-**Assumptions**: We are planning to build on the many works from [Wasmer](https://github.com/wasmerio/wasmer) for cost-efficient implementation.
+**Assumptions**: For cost-effective building, we want to build from the many works of [Wasmer](https://github.com/wasmerio/wasmer), although Antelope doesn't need to mount Wamser.
 
 #### Cases
 
@@ -143,7 +143,7 @@ NOTE: There is no official general Rust LLVM. [This standardization project](htt
 
 ### Why Wasmer?
 
-Performance is the top priority. See [benchmark 2021](https://00f.net/2021/02/22/webassembly-runtimes-benchmarks/). Also, it has the biggest ecosystem among WASM VM and supports many languages accordingly.
+Performance of Wasmer is placed in the top tier. See [benchmark 2021](https://00f.net/2021/02/22/webassembly-runtimes-benchmarks/). Also, it has the biggest ecosystem among WASM VM and supports many languages accordingly.
 
 ## Development Roadmap
 
